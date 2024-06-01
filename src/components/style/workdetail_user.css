@@ -1,0 +1,86 @@
+.work-detail-container {
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .work-detail-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .work-detail-container p {
+    margin-bottom: 8px;
+  }
+  
+  .work-detail-container strong {
+    font-weight: bold;
+  }
+  
+  .qr-code-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Optional: Customize QR Code styles */
+  .qr-code-container img {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+
+  /* style/loglist.css */
+.loglist-container {
+  max-width: 800px;
+  margin: 0 0;
+  padding: 20px;
+}
+
+.loglist-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.loglist-table th,
+.loglist-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.loglist-table th {
+  background-color: #f2f2f2;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.pagination .page-item {
+  margin: 0 5px;
+}
+
+.pagination .page-link {
+  cursor: pointer;
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.pagination .page-link:hover {
+  background-color: #f2f2f2;
+}
+
+.pagination .active .page-link {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+  

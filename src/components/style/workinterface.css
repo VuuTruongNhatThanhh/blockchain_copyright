@@ -1,0 +1,79 @@
+.container {
+    max-width: 600px;   
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  button:disabled:hover {
+    background-color: #ccc;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 5px;
+  }
+  
+  .success {
+    color: green;
+    margin-top: 5px;
+  }
+
+  
+
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff; /* Màu nền */
+  font-size: 16px; /* Kích thước chữ */
+  color: #555; /* Màu chữ */
+}
+
+/* Áp dụng kiểu cho option trong select */
+select option {
+  background-color: #fff; /* Màu nền */
+  color: #555; /* Màu chữ */
+}
+  

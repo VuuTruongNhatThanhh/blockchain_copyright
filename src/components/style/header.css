@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.menu {
+    padding: 10px;
+}
+#nav a {
+    line-height: 50px;
+    /* display: block; */
+}
+li:hover a {
+    background-color: gray;
+    text-decoration: none;
+    
+}
+
+.greeting {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: white;
+  }
+
+  .logout{
+    position: absolute;
+    top: 20px;
+    right: 47px;
+    color: white;
+    cursor: pointer;
+  }

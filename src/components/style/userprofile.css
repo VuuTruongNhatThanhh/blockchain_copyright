@@ -1,0 +1,92 @@
+.user-detail-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  table {
+    width: 85%;
+    /* height: 20px; */
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #f2f2f2;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .pagination {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .pagination li {
+    margin: 0 5px;
+  }
+  
+  .pagination button {
+    background-color: #4CAF50;
+    border: none;
+    color: #008CBA;
+    /* background-color: #008CBA; */
+    padding: 8px 16px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .pagination button:hover {
+    background-color: #45a049;
+  }
+  
+  .pagination .active button {
+    background-color: #008CBA;
+  }
+  
+  .loading, .user-not-found {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .waiting-approval {
+    color: black;
+  }
+  
+  .waiting-update {
+    color: black;
+  }
+  
+  .hidden {
+    color: red;
+  }
+  
+  .approved {
+    color: rgb(42, 224, 42);
+  }
+  
+  

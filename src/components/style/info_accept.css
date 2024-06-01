@@ -1,0 +1,35 @@
+.notification-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .notification-message {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .notification-message:last-child {
+    margin-bottom: 0;
+  }
+  
+  .notification-content {
+    margin-bottom: 20px;
+  }
+  
+  .notification-content .notification-message {
+    color: #007bff;
+  }
+  
+  .countdown-message {
+    font-weight: bold;
+  }
+  
+  
