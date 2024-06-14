@@ -19,6 +19,12 @@ const CreateListAdmin = () => {
   
 
   useEffect(() => {
+    const role = sessionStorage.getItem('role');
+    if (role === '0' || role === null) {
+      alert("Bạn không có quyền truy cập trang này");
+      navigate('/'); // Chuyển hướng về trang chủ hoặc trang đăng nhập
+      return;
+    }
     const loadWorks = async () => {
       if (!window.ethereum) {
         alert("Please install MetaMask to interact with Ethereum");

@@ -14,9 +14,15 @@ const CreateListAdmin = () => {
   const [worksPerPage, setWorksPerPage] = useState(5);
   const [searchKeyword, setSearchKeyword] = useState('');
   const [totalCreateWorks, setTotalCreateWorks] = useState(0);
-  
+  const navigate = useNavigate()
 
   useEffect(() => {
+    const role = sessionStorage.getItem('role');
+    if (role === '0' || role === null) {
+      alert("Bạn không có quyền truy cập trang này");
+      navigate('/'); // Chuyển hướng về trang chủ hoặc trang đăng nhập
+      return;
+    }
     const loadWorks = async () => {
       if (!window.ethereum) {
         alert("Please install MetaMask to interact with Ethereum");

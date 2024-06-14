@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Web3 from 'web3';
 import createWorkArtifact from '../../abis/Marketplace.json';
 import UserContract from '../../abis/User.json';
@@ -15,7 +15,14 @@ const WorkDetailAdmin = () => {
     const [searchKeyword, setSearchKeyword] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
     const [logsPerPage, setLogsPerPage] = useState(5);
+    const navigate = useNavigate()
     useEffect(() => {
+      const role = sessionStorage.getItem('role');
+      if (role === '0' || role === null) {
+        alert("Bạn không có quyền truy cập trang này");
+        navigate('/'); // Chuyển hướng về trang chủ hoặc trang đăng nhập
+        return;
+      }
       const loadWorkDetail = async () => {
         const web3 = new Web3(window.ethereum);
         await window.ethereum.request({ method: 'eth_requestAccounts' });

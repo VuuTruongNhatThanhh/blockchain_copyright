@@ -37,6 +37,9 @@ function Header() {
   const handleLogout = () => {
     sessionStorage.removeItem('isLoggedIn');
     sessionStorage.removeItem('name');
+    sessionStorage.removeItem('username')
+    sessionStorage.removeItem('userId')
+    sessionStorage.removeItem('role')
     navigate('/'); // Sử dụng navigate để chuyển hướng đến trang login
   };
   return (

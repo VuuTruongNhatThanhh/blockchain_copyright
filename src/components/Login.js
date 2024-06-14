@@ -55,17 +55,12 @@ const Login = () => {
 
                 sessionStorage.setItem('username', username);
                 sessionStorage.setItem('userId', userId);
+                sessionStorage.setItem('name', name);
+                sessionStorage.setItem('role', role);
+                sessionStorage.setItem('isLoggedIn', true);
                 if(role==1){
-                    setLoggedIn(true);
-                    sessionStorage.setItem('isLoggedIn', true);
-                    sessionStorage.setItem('name', name);
-                    sessionStorage.setItem('userId', userId);
                     navigate('/work-list-admin');
                 } else if (role==0) {
-                    setLoggedIn(true);
-                    sessionStorage.setItem('isLoggedIn', true);
-                    sessionStorage.setItem('name', name);
-                    sessionStorage.setItem('userId', userId);
                     navigate('/work-list');
                 }
             } else {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import Web3 from 'web3';
 import UserContract from '../../abis/User.json';
 import MarketplaceContract from '../../abis/Marketplace.json';
@@ -17,8 +17,15 @@ const UserDetailAdmin = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [worksPerPage] = useState(5);
     const [searchKeyword, setSearchKeyword] = useState('');
-
+    const navigate = useNavigate()
     useEffect(() => {
+
+        const role = sessionStorage.getItem('role');
+        if (role === '0' || role === null) {
+          alert("Bạn không có quyền truy cập trang này");
+          navigate('/'); // Chuyển hướng về trang chủ hoặc trang đăng nhập
+          return;
+        }
         const loadUserDetail = async () => {
             if (!window.ethereum) {
                 alert("Please install MetaMask to interact with Ethereum");

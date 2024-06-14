@@ -4,7 +4,7 @@ import createWorkArtifact from "../../abis/Marketplace.json";
 import QRCode from "qrcode.react";
 import '../style/worklist.css'
 import Header from '../Admin/Header2'; 
-import { Link } from "react-router-dom"; // Thêm dòng này
+import { Link, useNavigate } from "react-router-dom"; // Thêm dòng này
 const UpdatelistAdmin = () => {
   const [works, setWorks] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -14,10 +14,16 @@ const UpdatelistAdmin = () => {
   const [worksPerPage, setWorksPerPage] = useState(5);
   const [searchKeyword, setSearchKeyword] = useState('');
   const [totalWorks, setTotalWorks] = useState(0);
-  
+  const navigate = useNavigate()
 
   useEffect(() => {
     const loadWorks = async () => {
+      const role = sessionStorage.getItem('role');
+        if (role === '0' || role === null) {
+          alert("Bạn không có quyền truy cập trang này");
+          navigate('/'); // Chuyển hướng về trang chủ hoặc trang đăng nhập
+          return;
+        }
       if (!window.ethereum) {
         alert("Please install MetaMask to interact with Ethereum");
         return;
